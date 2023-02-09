@@ -1,0 +1,46 @@
+EASY QUESTION   
+https://www.hackerrank.com/challenges/python-arithmetic-operators/problem?isFullScreen=true 
+HACKER RANK 
+Task
+The provided code stub reads two integers from STDIN, a  and b. Add code to print three lines where:
+The first line contains the sum of the two numbers.
+The second line contains the difference of the two numbers (first - second).
+The third line contains the product of the two numbers. 
+
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+add = a + b  
+sub = a - b 
+prod = a * b 
+print (add) 
+print (sub) 
+print (prod)  
+
+MEDIUM QUESTION 
+https://www.hackerrank.com/challenges/write-a-function/problem?isFullScreen=true  
+
+def is_leap(year):
+    leap = False
+    
+    # Write your logic here
+    if year % 400 == 0:
+        leap = True
+    elif year % 100 == 0:
+        leap = False
+    elif year % 4 == 0:
+        leap = True
+    
+    return leap
+year = int(input())
+print(is_leap(year))  
+
+HARD QUESTION 
+https://www.hackerrank.com/challenges/maximize-it/problem?isFullScreen=true 
+from itertools import product
+
+if __name__ == '__main__':
+    k, m = map(int, input().split())
+    lists = [list(map(int, input().split()[1:])) for _ in range(k)]
+    results = map(lambda x: sum(i**2 for i in x) % m, product(*lists))
+    print(max(results))
