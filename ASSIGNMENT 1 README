@@ -1,3 +1,24 @@
+ 1) Use a language model to help your team write a program that does the following:
+
+1.Takes a text string as input
+
+2.Outputs a message about the sentiment of the text string, whether it’s “Positive”, “Negative” or “Neutral”.
+
+See also Sentiment Analysis
+ from textblob import TextBlob
+def sentiment_analysis(text):
+    analysis = TextBlob(text)
+    if analysis.sentiment.polarity > 0:
+        return "Positive"
+    elif analysis.sentiment.polarity == 0:
+        return "Neutral"
+    else:
+        return "Negative"
+
+text = input("Enter a text string: ")
+sentiment = sentiment_analysis(text)
+print("Sentiment:", sentiment)
+
 EASY QUESTION   
 https://www.hackerrank.com/challenges/python-arithmetic-operators/problem?isFullScreen=true 
 HACKER RANK 
